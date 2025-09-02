@@ -1,0 +1,51 @@
+---
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro";
+import NewFooter from "../components/NewFooter.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "115c314e-0071-4e28-987d-51dd2c843511";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="We believe good and balanced engineering</span> should be accessible for all. We build technical solutions that help you get there! Be it something from-scratch or a new one, we have something for all."
+    />
+    <title>Onekind | Building Web Apps, Cloud Solutions</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <AppHeader />
+    <slot />
+    <NewFooter />
+  </body>
+</html>
+<style>
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+</style>

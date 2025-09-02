@@ -1,0 +1,71 @@
+---
+import TechStack from "../components/Services/TechStack.astro";
+import HeroSection from "../components/Services/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Pricing from "../components/Pricing.astro";
+import FAQ from "../components/FAQ.astro";
+import Offerings from "../components/Services/Offerings.astro";
+---
+
+<Layout title="Onekind | Building Web Apps, Cloud Solutions">
+  <main class="space-y-20 mb-40">
+    <HeroSection
+      eyebrow="It's never too late"
+      title="Cloud Engineering"
+      description="Let us help you get ready for the next big wave on your website. Afterall, who doesn't like to sleep at night?"
+    />
+    <TechStack
+      techstack={[
+        { image: "/images/services/cloud/aws.svg" },
+        { image: "/images/services/cloud/azure.svg" },
+        { image: "/images/services/cloud/kubernetes.svg" },
+        { image: "/images/services/cloud/serverless.svg" },
+        { image: "/images/services/cloud/kafka.svg" },
+        { image: "/images/services/devops/docker.svg" },
+        { image: "/images/services/cloud/prometheus.png" },
+        { image: "/images/services/cloud/grafana.svg" },
+        { image: "/images/services/cloud/elastic.svg" },
+      ]}
+    />
+    <Offerings
+      offerings={[
+        {
+          title: "Barebone Architecture",
+          description:
+            "Best suited for products which are either in initial stage or in development phase.",
+        },
+        {
+          title: "Infrastructure as a Code",
+          description:
+            "We write IaaC scripts for you to automate creation and destroying of infrastructure. Useful for multi environment deployments.",
+        },
+        {
+          title: "Container Deployments",
+          description:
+            "We have the expertise to deploy our apps in containers, either using AWS Fargate or Kubernetes.",
+        },
+        {
+          title: "Serverless Development",
+          description:
+            "Have a heavy task? We will do serverless development for you and reduce the cost.",
+        },
+        {
+          title: "Architecture Solutioning",
+          description:
+            "Just starting out and want to know the best architecture for your product? Say no more.",
+        },
+        {
+          title: "Backup and Recovery",
+          description:
+            "Your products are always vulnerable running in the cloud. We can help you become disaster proof.",
+        },
+      ]}
+    />
+    <!-- <Stats/> -->
+    <Pricing />
+    <!-- <Testimonials/> -->
+    <!-- <CallToAction/> -->
+    <FAQ />
+    <!-- <Blog/> -->
+  </main>
+</Layout>

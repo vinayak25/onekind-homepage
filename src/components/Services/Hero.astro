@@ -1,0 +1,23 @@
+---
+import Container from "../Container.astro"
+
+const {eyebrow, title, description} = Astro.props
+---
+
+<div class="relative">
+    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div>
+    <Container>
+        <div class="relative pt-36 ml-auto">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <p class="font-semibold leading-7 text-primary text-lg">{eyebrow}</p>
+        <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">{title}</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">{description}</p>
+      </div>
+    </div>
+</div>
+</Container>
+  </div>

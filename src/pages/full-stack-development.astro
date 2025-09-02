@@ -1,0 +1,69 @@
+---
+import TechStack from "../components/Services/TechStack.astro";
+import HeroSection from "../components/Services/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Pricing from "../components/Pricing.astro";
+import FAQ from "../components/FAQ.astro";
+import Offerings from "../components/Services/Offerings.astro";
+---
+
+<Layout title="Onekind | Building Web Apps, Cloud Solutions">
+  <main class="space-y-20 mb-40">
+    <HeroSection
+      eyebrow="Love at first sight"
+      title="Full Stack Development"
+      description="We offer variety of development services, ranging from full scale development to fixing bugs. We don't shy away from anything which helps you grow your product."
+    />
+    <TechStack
+      techstack={[
+        { image: "/images/services/full-stack/nodejs.png" },
+        { image: "/images/services/full-stack/nestjs.svg" },
+        { image: "/images/services/full-stack/laravel.svg" },
+        { image: "/images/services/full-stack/nextjs.svg" },
+        { image: "/images/services/full-stack/django.svg" },
+        { image: "/images/services/full-stack/flutter.png" },
+        { image: "/images/services/full-stack/mongodb.svg" },
+        { image: "/images/services/full-stack/mysql.svg" },
+        { image: "/images/services/full-stack/postgres.svg" },
+      ]}
+    />
+    <Offerings
+      offerings={[
+        {
+          title: "Web App Development",
+          description: "We build functional and beautiful web apps.",
+        },
+        {
+          title: "Mobile App Development",
+          description:
+            "Have a mobile app idea? We can build it for you and get to the market.",
+        },
+        {
+          title: "SaaS Development",
+          description: "From Signup to Subscription, we can do it all for you.",
+        },
+        {
+          title: "Admin Panel Development",
+          description:
+            "Still getting your orders and complaints on mails? Let us build an admin panel for you.",
+        },
+        {
+          title: "API/SDK Development",
+          description:
+            "We care for the companies who care for tech. With proven experience, we can help you scale your offerings.",
+        },
+        {
+          title: "Integration Development",
+          description:
+            "Want any specific payment, analytics or marketing service to be integrated? Let's do it.",
+        },
+      ]}
+    />
+    <!-- <Stats/> -->
+    <Pricing />
+    <!-- <Testimonials/> -->
+    <!-- <CallToAction/> -->
+    <FAQ />
+    <!-- <Blog/> -->
+  </main>
+</Layout>

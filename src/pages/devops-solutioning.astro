@@ -1,0 +1,50 @@
+---
+import TechStack from "../components/Services/TechStack.astro";
+import HeroSection from "../components/Services/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Pricing from "../components/Pricing.astro";
+import FAQ from "../components/FAQ.astro";
+import Offerings from "../components/Services/Offerings.astro";
+---
+
+<Layout title="Onekind | Building Web Apps, Cloud Solutions">
+  <main class="space-y-20 mb-40">
+    <HeroSection
+      eyebrow="Helps keep us in check"
+      title="Devops Solutioning"
+      description="We have the necessary experience to help you implement automated processes in place, be it from code review to monitoring, we do it all!"
+    />
+    <TechStack
+      techstack={[
+        { image: "/images/services/devops/git.svg" },
+        { image: "/images/services/devops/docker.svg" },
+        { image: "/images/services/devops/sonarqube.svg" },
+      ]}
+    />
+    <Offerings
+      offerings={[
+        {
+          title: "CI/CD Pipelines",
+          description:
+            "Be it Jenkins Pipeline or any devops tool, we can help you setup your CI/CD process.",
+        },
+        {
+          title: "Code Review Automation",
+          description:
+            "Get the code reviewed for security purposes or best practices whenever developer pushes the code. Every Single Time.",
+        },
+        {
+          title: "Customised Automations",
+          description:
+            "Automations with DevOps is limitless, we can help you automate what you have in mind.",
+        },
+      ]}
+    />
+    <!-- <Stats/> -->
+    <Pricing />
+    <!-- <Testimonials/> -->
+    <!-- <CallToAction/> -->
+    <FAQ />
+    <!-- <Blog/> -->
+  </main>
+</Layout>

@@ -1,0 +1,33 @@
+---
+import Container from "../Container.astro";
+
+const { offerings } = Astro.props;
+---
+
+<section class="bg-gray-900 text-white">
+  <div class="mx-auto max-w-screen-xl">
+    <div class="mx-auto max-w-lg text-center">
+      <h2 class="text-3xl font-bold sm:text-4xl">Things we do</h2>
+
+      <p class="mt-4 text-gray-300">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
+        aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur
+        saepe laborum.
+      </p>
+    </div>
+
+    <Container>
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {
+          offerings.map((s) => (
+            <a class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-primary-500/10 hover:shadow-indigo-500/10">
+              <h2 class="mt-0 text-xl font-bold text-white">{s.title}</h2>
+
+              <p class="mt-1 text-sm text-gray-300">{s.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </Container>
+  </div>
+</section>
